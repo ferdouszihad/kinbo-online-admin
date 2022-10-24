@@ -22,7 +22,7 @@ const OrderDetail = () => {
       <h2 className="mb-3">Order Detail</h2>
       <div className="shadow-sm p-3 mb-5 bg-body rounded">
         <p>OrderId: {orderDetail._id}</p>
-        <p>Amount: {orderDetail.amount}</p>
+        <p>Amount: {orderDetail.amount} tk</p>
         <p>TrasactionId: {orderDetail.transactionId}</p>
         <p>Delivery: {orderDetail.delivery}</p>
         <p>Paid: {orderDetail.paid ? "Completed" : "Not completed"}</p>
