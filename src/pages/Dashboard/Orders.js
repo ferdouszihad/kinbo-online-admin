@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-
+import "./Orders.css";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
@@ -40,7 +40,7 @@ const Orders = () => {
   };
 
   console.log(orders);
-
+  let d = new Date().toISOString().slice(0,10);
   return (
     <div>
       <table class="table caption-top">
@@ -57,7 +57,7 @@ const Orders = () => {
         </thead>
         <tbody>
           {orders.map((order, index) => (
-            <tr>
+            <tr className={`${ d === order.createdAt?.slice(0,10) ? "bg-table":""}`}>
               <td>{index + 1}</td>
               <td>{order._id}</td>
               <td>{order.transactionId}</td>

@@ -14,8 +14,9 @@ const OrderDetail = () => {
         setOrderDetail(data);
       });
   }, [id]);
- 
-
+  
+  console.log(orderDetail);
+  
   return (
     <div>
       <h2 className="mb-3">Order Detail</h2>
@@ -25,6 +26,7 @@ const OrderDetail = () => {
         <p>TrasactionId: {orderDetail.transactionId}</p>
         <p>Delivery: {orderDetail.delivery}</p>
         <p>Paid: {orderDetail.paid ? "Completed" : "Not completed"}</p>
+        <p>Date: {orderDetail.createdAt?.slice(0,10)}</p>
       </div>
       <div className="shadow-sm p-3 mb-5 bg-body rounded">
         <table class="table caption-top">
