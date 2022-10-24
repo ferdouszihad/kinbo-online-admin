@@ -60,8 +60,8 @@ const Orders = () => {
             <tr className={`${ d === order.createdAt?.slice(0,10) ? "bg-table":""}`}>
               <td>{index + 1}</td>
               <td>{order._id}</td>
-              <td>{order.transactionId}</td>
-              <td>{order.amount}</td>
+              <td>{order.transactionId ? order.transactionId : "No payment"}</td>
+              <td>{order.amount ? order.amount : "0"} tk</td>
               <td>
                 {order.delivery === "pending" ? (
                   <button
